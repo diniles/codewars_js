@@ -17,4 +17,21 @@
 function order(words) {
   // ...
   if (words === "") return "";
+  const wordsArray = words.split(" ");
+  const result = [];
+  result.length = wordsArray.length;
+
+  for (const word of wordsArray) {
+    for (const ch of word) {
+      if (typeof parseInt(ch) == "number") {
+        result[parseInt(ch) - 1] = word;
+      }
+    }
+  }
+  console.log(result);
+  return result.join(" ");
 }
+
+console.log(order("is2 Thi1s T4est 3a"));
+console.log(order("4of Fo1r pe6ople g3ood th5e the2"));
+console.log(order(""));
