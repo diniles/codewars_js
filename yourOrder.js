@@ -28,7 +28,6 @@ function order(words) {
       }
     }
   }
-  console.log(result);
   return result.join(" ");
 }
 
