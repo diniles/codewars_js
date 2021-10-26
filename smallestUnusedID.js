@@ -1,4 +1,5 @@
 // smallestUnusedID.js
+// https://www.codewars.com/kata/55eea63119278d571d00006a/train/javascript
 // Hey awesome programmer!
 
 // You've got much data to manage and of course you use zero-based and
@@ -16,18 +17,10 @@
 
 function nextId(ids) {
   //this will be awesome!
-  let nId = ids[0];
-  for (let i = 0; i < ids.length; i++) {
-    if (ids[i + 1] - ids[i] > 1) {
-      if (nId <= ids[i]) {
-        nId = ids[i] + 1;
-        break;
-      }
-    } else if (nId <= ids[i]) {
-      nId = ids[i] + 1;
-    }
+  const used = new Set(ids);
+  for (let i = 0; i <= ids.length; i++) {
+    if (!used.has(i)) return i;
   }
-  return nId;
 }
 console.log(nextId([0, 1, 2, 3, 5]));
 console.log(nextId([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
