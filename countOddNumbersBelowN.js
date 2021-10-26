@@ -8,14 +8,6 @@
 // oddCount(15023), 7511, "Oops! Wrong.");
 
 function oddCount(n) {
-  // your code here
-  // let count = 0;
-
-  // for (let i = 1; i < n; i++) {
-  //   if (i % 2 != 0) {
-  //     count++;
-  //   }
-  // }
   return n % 2 != 0 ? (count = (n - 1) / 2) : (count = n / 2);
 }
 
