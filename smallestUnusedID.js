@@ -13,3 +13,21 @@
 // Go on and code some pure awesomeness!
 // nextId([0,1,2,3,5]), 4);
 // nextId([0,1,2,3,4,5,6,7,8,9,10]), 11);
+
+function nextId(ids) {
+  //this will be awesome!
+  let nId = ids[0];
+  for (let i = 0; i < ids.length; i++) {
+    if (ids[i + 1] - ids[i] > 1) {
+      if (nId <= ids[i]) {
+        nId = ids[i] + 1;
+        break;
+      }
+    } else if (nId <= ids[i]) {
+      nId = ids[i] + 1;
+    }
+  }
+  return nId;
+}
+console.log(nextId([0, 1, 2, 3, 5]));
+console.log(nextId([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
