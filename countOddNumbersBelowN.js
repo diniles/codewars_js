@@ -11,6 +11,11 @@ function oddCount(n) {
   return n % 2 != 0 ? (count = (n - 1) / 2) : (count = n / 2);
 }
 
+// best solution
+function oddCount(n) {
+  const oddCount = (n) => Math.floor(n / 2);
+}
+
 console.log(oddCount(7));
 console.log(oddCount(15));
 console.log(oddCount(15023));
