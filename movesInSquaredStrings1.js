@@ -59,6 +59,7 @@ function horMirror(strng) {
 }
 function oper(fct, s) {
   // Your code
+  return fct(s);
 }
 
-console.log(vertMirror("abcd\nefgh\nijkl\nmnop"));
+console.log(oper(vertMirror, "abcd\nefgh\nijkl\nmnop"));
