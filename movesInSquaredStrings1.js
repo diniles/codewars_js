@@ -46,3 +46,12 @@
 //Basic tests horMirror
 //oper(horMirror, "lVHt\nJVhv\nCSbg\nyeCt"), "yeCt\nCSbg\nJVhv\nlVHt");
 //oper(horMirror, "njMK\ndbrZ\nLPKo\ncEYz"), "cEYz\nLPKo\ndbrZ\nnjMK");
+function vertMirror(strng) {
+  // Your code
+}
+function horMirror(strng) {
+  // Your code
+}
+function oper(fct, s) {
+  // Your code
+}
