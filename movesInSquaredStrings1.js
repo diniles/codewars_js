@@ -48,14 +48,17 @@
 //oper(horMirror, "njMK\ndbrZ\nLPKo\ncEYz"), "cEYz\nLPKo\ndbrZ\nnjMK");
 function vertMirror(strng) {
   // Your code
+  return strng
+    .split("\n")
+    .map((word) => word.split("").reverse().join(""))
+    .join("\n");
 }
 function horMirror(strng) {
   // Your code
-  let str = strng.split("\n").reverse().join("\n");
-  return str;
+  return strng.split("\n").reverse().join("\n");
 }
 function oper(fct, s) {
   // Your code
 }
 
-console.log(horMirror("abcd\nefgh\nijkl\nmnop"));
+console.log(vertMirror("abcd\nefgh\nijkl\nmnop"));
