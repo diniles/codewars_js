@@ -35,7 +35,7 @@
 // You can see each form according to the language in "Sample Tests".
 
 // Bash Note:
-// The input strings are separated by , instead of \n. The output strings should
+// The input strings are separated by \r, instead of \n. The output strings should
 // be separated by \r instead of \n. See "Sample Tests".
 
 // test
@@ -51,7 +51,11 @@ function vertMirror(strng) {
 }
 function horMirror(strng) {
   // Your code
+  let str = strng.split("\n").reverse().join("\n");
+  return str;
 }
 function oper(fct, s) {
   // Your code
 }
+
+console.log(horMirror("abcd\nefgh\nijkl\nmnop"));
