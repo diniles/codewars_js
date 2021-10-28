@@ -12,3 +12,17 @@
 // "Ths wbst s fr lsrs LL!".
 
 // Note: for this kata y isn't considered a vowel.
+
+function disemvowel(str) {
+  const vowels = ["a", "e", "i", "o", "u"];
+  let result = "";
+  for (const ch of str) {
+    if (vowels.includes(ch.toLowerCase())) {
+      continue;
+    }
+    result += ch;
+  }
+  return result;
+}
+
+console.log(disemvowel("This website is for losers LOL!"));
