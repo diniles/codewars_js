@@ -25,4 +25,9 @@ function disemvowel(str) {
   return result;
 }
 
+// best solution
+// function disemvowel(str) {
+//   return str.replace(/[aeiou]/gi, '');
+// }
+
 console.log(disemvowel("This website is for losers LOL!"));
