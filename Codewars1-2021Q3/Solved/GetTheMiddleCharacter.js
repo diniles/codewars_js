@@ -38,6 +38,12 @@ function getMiddle(s) {
   return result;
 }
 
+// best solution
+// function getMiddle(s)
+// {
+//   return s.substr(Math.ceil(s.length / 2 - 1), s.length % 2 === 0 ? 2 : 1);
+// }
+
 console.log(getMiddle("test"));
 console.log(getMiddle("testing"));
 console.log(getMiddle("middle"));
