@@ -22,5 +22,7 @@ function unluckyDays(year) {
   return count;
 }
 
+//my solution is the best)))
+
 console.log(unluckyDays(2015));
 console.log(unluckyDays(1986));
