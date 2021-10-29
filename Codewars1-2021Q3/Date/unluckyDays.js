@@ -13,3 +13,14 @@
 
 // unluckyDays(2015) == 3
 // unluckyDays(1986) == 1
+
+function unluckyDays(year) {
+  let count = 0;
+  for (let month = 0; month < 12; month++) {
+    if (new Date(year, month, 13).getDay() == 5) count++;
+  }
+  return count;
+}
+
+console.log(unluckyDays(2015));
+console.log(unluckyDays(1986));
