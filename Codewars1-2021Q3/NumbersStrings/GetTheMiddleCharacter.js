@@ -23,3 +23,22 @@
 // #Output
 
 // The middle character(s) of the word represented as a string.
+
+function getMiddle(s) {
+  let result = "";
+  if (s.length == 1) {
+    result = s;
+  }
+  if (s.length % 2 == 0) {
+    const m = s.length / 2;
+    result += s[m - 1] + s[m];
+  } else {
+    result = s[(s.length - 1) / 2];
+  }
+  return result;
+}
+
+console.log(getMiddle("test"));
+console.log(getMiddle("testing"));
+console.log(getMiddle("middle"));
+console.log(getMiddle("A"));
