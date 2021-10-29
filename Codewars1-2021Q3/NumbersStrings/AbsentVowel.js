@@ -1,5 +1,5 @@
 // AbsentVowel.js
-// https://www.codewars.com/kata/absent-vowel
+// https://www.codewars.com/kata/absentVowel-vowel
 // Your job is to figure out the index of which vowel is missing from a given
 // string:
 
@@ -14,3 +14,16 @@
 // Examples
 // "John Doe hs seven red pples under his bsket"          =>  0  ; missing: "a"
 // "Bb Smith sent us six neatly arranged range bicycles"  =>  3  ; missing: "o"
+
+function absentVowel(x) {
+  const vowels = ["a", "e", "i", "o", "u"];
+  for (let i = 0; i < vowels.length; i++) {
+    if (!x.includes(vowels[i].toLowerCase())) {
+      return i;
+    }
+    continue;
+  }
+}
+
+console.log(absentVowel("John Doe hs seven red pples under his bsket"));
+console.log(absentVowel("Bb Smith sent us six neatly arranged range bicycles"));
