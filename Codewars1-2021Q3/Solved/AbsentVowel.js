@@ -25,5 +25,9 @@ function absentVowel(x) {
   }
 }
 
+// best solution
+// const absentVowel = string =>
+//   [...'aeiou'].findIndex(letter => !string.includes(letter))
+
 console.log(absentVowel("John Doe hs seven red pples under his bsket"));
 console.log(absentVowel("Bb Smith sent us six neatly arranged range bicycles"));
