@@ -18,5 +18,15 @@ function explode(s) {
   return result;
 }
 
+// best solution
+const explode = (s) => s.replace(/\d/g, (d) => d.repeat(d));
+// second best solution
+function explode(s) {
+  return s
+    .split("")
+    .map((e) => e.repeat(+e))
+    .join("");
+}
+
 console.log(explode("312"));
 console.log(explode("102269"));
