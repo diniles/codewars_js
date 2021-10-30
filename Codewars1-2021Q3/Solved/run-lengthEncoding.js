@@ -38,5 +38,27 @@ function runLengthEncoding(str) {
   }
   return result;
 }
+
+// best solution
+function runLengthEncoding(str) {
+  var arr = [],
+    counter = 1;
+  for (var i = 0; i < str.length; i++) {
+    if (str[i] === str[i + 1]) {
+      counter++;
+    } else {
+      arr.push([counter, str[i]]);
+      counter = 1;
+    }
+  }
+  return arr;
+}
+// second best solution
+var runLengthEncoding = function (str) {
+  return (str.match(/(.)\1*/g) || []).reduce(function (r, s) {
+    return r.push([s.length, s[0]]), r;
+  }, []);
+};
+
 console.log(runLengthEncoding("hello world!"));
 console.log(runLengthEncoding("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbb"));
