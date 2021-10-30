@@ -12,3 +12,20 @@
 // obj.getSecret() # returns 5
 // obj.setSecret(2)
 // obj.getSecret() # returns 2
+
+function createSecretHolder(secret) {
+  return {
+    s: secret,
+    getSecret() {
+      return this.s;
+    },
+    setSecret(secret) {
+      this.s = secret;
+    },
+  };
+}
+
+obj = createSecretHolder(5);
+console.log(obj.getSecret());
+obj.setSecret(2);
+console.log(obj.getSecret());
