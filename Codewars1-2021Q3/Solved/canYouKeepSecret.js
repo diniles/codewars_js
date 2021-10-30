@@ -25,6 +25,18 @@ function createSecretHolder(secret) {
   };
 }
 
+// best solution
+function createSecretHolder(secret) {
+  return {
+    getSecret: function () {
+      return secret;
+    },
+    setSecret: function (v) {
+      secret = v;
+    },
+  };
+}
+
 obj = createSecretHolder(5);
 console.log(obj.getSecret());
 obj.setSecret(2);
