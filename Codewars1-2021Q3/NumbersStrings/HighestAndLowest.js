@@ -12,3 +12,12 @@
 // There will always be at least one number in the input string.
 // Output string must be two numbers separated by a single space, and highest
 // number is first.
+
+function highAndLow(nums) {
+  const arr = nums.split(" ").sort();
+  return arr[arr.length - 1] + " " + arr[0];
+}
+
+console.log(highAndLow("1 2 3 4 5"));
+console.log(highAndLow("1 2 -3 4 5"));
+console.log(highAndLow("1 9 3 4 -5"));
