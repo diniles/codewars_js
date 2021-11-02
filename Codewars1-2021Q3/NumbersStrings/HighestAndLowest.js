@@ -13,8 +13,8 @@
 // Output string must be two numbers separated by a single space, and highest
 // number is first.
 
-function highAndLow(nums) {
-  const arr = nums.split(" ").sort();
+function highAndLow(numbers) {
+  const arr = numbers.split(" ").sort();
   return arr[arr.length - 1] + " " + arr[0];
 }
 
