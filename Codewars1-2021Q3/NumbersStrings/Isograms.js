@@ -8,3 +8,12 @@
 // "Dermatoglyphics" --> true
 // "aba" --> false
 // "moOse" --> false (ignore letter casing)
+
+function isIsogram(str) {
+  const letters = new Set(str.toLowerCase());
+  return letters.size == str.length;
+}
+
+console.log(isIsogram("Dermatoglyphics"));
+console.log(isIsogram("aba"));
+console.log(isIsogram("moOse"));
