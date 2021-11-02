@@ -14,6 +14,11 @@ function isIsogram(str) {
   return letters.size == str.length;
 }
 
+// best solution
+function isIsogram(str) {
+  return !/(\w).*\1/i.test(str);
+}
+
 console.log(isIsogram("Dermatoglyphics"));
 console.log(isIsogram("aba"));
 console.log(isIsogram("moOse"));
