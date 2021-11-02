@@ -18,6 +18,13 @@ function highAndLow(numbers) {
   return arr[arr.length - 1] + " " + arr[0];
 }
 
+// best solution
+
+function highAndLow(numbers) {
+  numbers = numbers.split(" ").map(Number);
+  return Math.max.apply(0, numbers) + " " + Math.min.apply(0, numbers);
+}
+
 console.log(highAndLow("1 2 3 4 5"));
 console.log(highAndLow("1 2 -3 4 5"));
 console.log(highAndLow("1 9 3 4 -5"));
