@@ -47,7 +47,11 @@ function init(arr) {
   return arr.slice(0, -1);
 }
 
+function last(arr) {
+  return arr[arr.length - 1];
+}
+
 console.log(head([1, 2, 3, 4, 5]));
 console.log(tail([1, 2, 3, 4, 5]));
 console.log(init([1, 5, 7, 9]));
-// console.log(last([7, 2]));
+console.log(last([7, 2]));
