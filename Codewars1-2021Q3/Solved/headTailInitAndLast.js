@@ -51,6 +51,20 @@ function last(arr) {
   return arr[arr.length - 1];
 }
 
+// best solution, the same is mine)))
+function head(a) {
+  return a[0];
+}
+function last(a) {
+  return a[a.length - 1];
+}
+function init(a) {
+  return a.slice(0, -1);
+}
+function tail(a) {
+  return a.slice(1);
+}
+
 console.log(head([1, 2, 3, 4, 5]));
 console.log(head([5, 1]));
 console.log(tail([1, 2, 3, 4, 5]));
