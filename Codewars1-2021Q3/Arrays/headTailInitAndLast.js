@@ -30,6 +30,11 @@
 // Most tests consist of 100 randomly generated arrays, each with four tests, one for each
 // operation. There are 400 tests overall. No empty arrays will be given.
 // Haskell has QuickCheck tests
+// Test.assertEquals(head([5, 1]), 5);
+// Test.assertSimilar(tail([1]), []);
+// Test.assertSimilar(init([1, 5, 7, 9]), [1, 5, 7]);
+// Test.assertEquals(last([7, 2]), 2);
+
 function head(arr) {
   return arr[0];
 }
@@ -38,5 +43,11 @@ function tail(arr) {
   return arr.slice(1);
 }
 
+function init(arr) {
+  return arr.slice(0, -1);
+}
+
 console.log(head([1, 2, 3, 4, 5]));
 console.log(tail([1, 2, 3, 4, 5]));
+console.log(init([1, 5, 7, 9]));
+// console.log(last([7, 2]));
