@@ -34,9 +34,9 @@ function head(arr) {
   return arr[0];
 }
 
-// function tail(arr) {
-//   return arr.slice(1);
-// }
+function tail(arr) {
+  return arr.slice(1);
+}
 
 console.log(head([1, 2, 3, 4, 5]));
 console.log(tail([1, 2, 3, 4, 5]));
