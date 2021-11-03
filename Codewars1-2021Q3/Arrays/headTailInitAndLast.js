@@ -52,6 +52,8 @@ function last(arr) {
 }
 
 console.log(head([1, 2, 3, 4, 5]));
+console.log(head([5, 1]));
 console.log(tail([1, 2, 3, 4, 5]));
+console.log(tail([1]));
 console.log(init([1, 5, 7, 9]));
 console.log(last([7, 2]));
