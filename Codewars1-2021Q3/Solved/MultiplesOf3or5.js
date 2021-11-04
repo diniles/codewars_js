@@ -22,4 +22,6 @@ function solution(number) {
   return result;
 }
 
+// best solution - is same as mine
+
 console.log(solution(10));
