@@ -16,17 +16,17 @@
 // //>>>>> 7
 // The input will always be an array.
 
-function deepCount(arr) {
+function deepCount(a) {
   let counter = 0;
-  function count(arr) {
-    for (let i = 0; i < arr.length; i++) {
+  function count(a) {
+    for (let i = 0; i < a.length; i++) {
       counter++;
-      if (Array.isArray(arr[i])) {
-        count(arr[i]);
+      if (Array.isArray(a[i])) {
+        count(a[i]);
       }
     }
   }
-  count(arr);
+  count(a);
   return counter;
 }
 
