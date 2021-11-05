@@ -15,3 +15,29 @@
 // deepCount([1, 2, [3, 4, [5]]]);
 // //>>>>> 7
 // The input will always be an array.
+
+function deepCount(a) {
+  let counter = 0;
+  function count(a) {
+    for (let i = 0; i < a.length; i++) {
+      counter++;
+      if (Array.isArray(a[i])) {
+        count(a[i]);
+      }
+    }
+  }
+  count(a);
+  return counter;
+}
+
+// best solution
+function deepCount(a) {
+  return a.reduce(
+    (s, e) => s + (Array.isArray(e) ? deepCount(e) : 0),
+    a.length
+  );
+}
+
+console.log(deepCount([1, 2, 3]));
+console.log(deepCount(["x", "y", ["z"]]));
+console.log(deepCount([1, 2, [3, 4, [5]]]));
