@@ -24,3 +24,19 @@
 // Input will always have the first letter capitalised and the rest
 // lowercase (e.g. Sam).
 // The input can be modified
+
+function nickname(name) {
+  const vowels = "aeiou";
+  if (vowels.includes(name[2])) {
+    return name.slice(0, 4);
+  } else {
+    return name.slice(0, 3);
+  }
+}
+
+console.log(nickname("Robert")); //=> "Rob"
+console.log(nickname("Kimberly")); //=> "Kim"
+console.log(nickname("Samantha")); //=> "Sam"
+console.log(nickname("Jeannie")); //=> "Jean"
+console.log(nickname("Douglas")); //=> "Doug"
+console.log(nickname("Gregory")); //=> "Greg"
