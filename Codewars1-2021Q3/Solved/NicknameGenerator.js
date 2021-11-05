@@ -37,6 +37,12 @@ function nickname(name) {
   }
 }
 
+// best solution
+const nicknameGenerator = (name) =>
+  name.length > 3
+    ? name.slice(0, 3 + "aeiou".includes(name[2]))
+    : "Error: Name too short";
+
 console.log(nickname("Robert")); //=> "Rob"
 console.log(nickname("Kimberly")); //=> "Kim"
 console.log(nickname("Samantha")); //=> "Sam"
