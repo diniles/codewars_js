@@ -27,4 +27,8 @@
 // Example of a string rotated to the left by one position:
 // s = "123456" gives "234561".
 
-function revrot(str, sz) {}
+function revrot(str, sz) {
+  if (sz <= 0 || str.length == 0) {
+    return "";
+  }
+}
