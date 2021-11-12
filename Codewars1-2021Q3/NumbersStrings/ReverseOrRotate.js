@@ -26,3 +26,5 @@
 // revrot("563000655734469485", 4) --> "0365065073456944"
 // Example of a string rotated to the left by one position:
 // s = "123456" gives "234561".
+
+function revrot(str, sz) {}
