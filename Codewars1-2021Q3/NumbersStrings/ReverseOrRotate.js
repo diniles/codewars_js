@@ -37,20 +37,24 @@ function revrot(str, sz) {
     return "";
   }
   function toChunks() {
-    if (strL % sz == 0) {
-    } else {
+    if (strL % sz != 0) {
       str.length = strL - (strL % sz);
     }
+    let strArr = [];
+    for (let i = 0; i < str.length; i + sz) {
+      strArr.push(str.substring(i, sz));
+    }
+    return strArr;
   }
-  toChunks();
+  console.log(toChunks());
 }
 
 console.log(revrot("123456987654", 6));
-console.log(revrot("123456987653", 6));
-console.log(revrot("66443875", 4));
-console.log(revrot("66443875", 8));
-console.log(revrot("664438769", 8));
-console.log(revrot("123456779", 8));
-console.log(revrot("", 8));
-console.log(revrot("123456779", 0));
-console.log(revrot("563000655734469485", 4));
+// console.log(revrot("123456987653", 6));
+// console.log(revrot("66443875", 4));
+// console.log(revrot("66443875", 8));
+// console.log(revrot("664438769", 8));
+// console.log(revrot("123456779", 8));
+// console.log(revrot("", 8));
+// console.log(revrot("123456779", 0));
+// console.log(revrot("563000655734469485", 4));
