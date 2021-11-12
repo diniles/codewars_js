@@ -28,12 +28,21 @@
 // s = "123456" gives "234561".
 
 function revrot(str, sz) {
-  if (sz <= 0 || str.length == 0) {
+  let strL = str.length;
+
+  if (sz <= 0 || strL == 0) {
     return "";
   }
-  if (sz > str.length) {
+  if (sz > strL) {
     return "";
   }
+  function toChunks() {
+    if (strL % sz == 0) {
+    } else {
+      str.length = strL - (strL % sz);
+    }
+  }
+  toChunks();
 }
 
 console.log(revrot("123456987654", 6));
