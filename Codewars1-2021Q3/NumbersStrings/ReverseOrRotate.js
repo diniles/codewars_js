@@ -31,4 +31,7 @@ function revrot(str, sz) {
   if (sz <= 0 || str.length == 0) {
     return "";
   }
+  if (sz > str.length) {
+    return "";
+  }
 }
