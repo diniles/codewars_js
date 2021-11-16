@@ -41,8 +41,8 @@ function revrot(str, sz) {
       str.length = strL - (strL % sz);
     }
     let strArr = [];
-    for (let i = 0; i <= str.length; i += sz) {
-      strArr.push(str.substring(i, sz));
+    for (let i = 0; i < str.length; i += sz) {
+      strArr.push(str.substring(i, i + sz));
     }
     return strArr;
   }
@@ -50,7 +50,7 @@ function revrot(str, sz) {
 }
 
 console.log(revrot("123456987654", 6));
-// console.log(revrot("123456987653", 6));
+console.log(revrot("123456987653", 6));
 // console.log(revrot("66443875", 4));
 // console.log(revrot("66443875", 8));
 // console.log(revrot("664438769", 8));
