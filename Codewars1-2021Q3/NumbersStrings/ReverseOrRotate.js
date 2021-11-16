@@ -41,7 +41,7 @@ function revrot(str, sz) {
       str.length = strL - (strL % sz);
     }
     let strArr = [];
-    for (let i = 0; i < str.length; i + sz) {
+    for (let i = 0; i <= str.length; i += sz) {
       strArr.push(str.substring(i, sz));
     }
     return strArr;
