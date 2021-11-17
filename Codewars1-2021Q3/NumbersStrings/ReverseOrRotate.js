@@ -24,6 +24,7 @@
 // revrot("", 8) --> ""
 // revrot("123456779", 0) --> ""
 // revrot("563000655734469485", 4) --> "0365065073456944"
+// revrot(733049910872815764, 5) --> "330479108928157"
 // Example of a string rotated to the left by one position:
 // s = "123456" gives "234561".
 
@@ -65,10 +66,11 @@ function revrot(str, sz) {
 
 console.log(revrot("123456987654", 6));
 console.log(revrot("123456987653", 6));
-// console.log(revrot("66443875", 4));
-// console.log(revrot("66443875", 8));
-// console.log(revrot("664438769", 8));
-// console.log(revrot("123456779", 8));
-// console.log(revrot("", 8));
-// console.log(revrot("123456779", 0));
-// console.log(revrot("563000655734469485", 4));
+console.log(revrot("66443875", 4));
+console.log(revrot("66443875", 8));
+console.log(revrot("664438769", 8));
+console.log(revrot("123456779", 8));
+console.log(revrot("", 8));
+console.log(revrot("123456779", 0));
+console.log(revrot("563000655734469485", 4));
+console.log(revrot(733049910872815764, 5));
