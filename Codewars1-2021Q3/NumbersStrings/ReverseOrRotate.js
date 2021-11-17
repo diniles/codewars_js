@@ -57,7 +57,7 @@ function revrot(str, sz) {
       }
       strArr.push(chunk);
     }
-    return strArr;
+    return strArr.join("");
   }
   console.log(toChunks());
 }
