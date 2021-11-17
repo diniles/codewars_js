@@ -17,3 +17,12 @@
 // search(".ad") === true
 // search("b..") === true
 // Note: the data structure will be initialized multiple times during the tests!
+var WordDictionary = function () {};
+
+WordDictionary.prototype.addWord = function (word) {
+  //code me
+};
+
+WordDictionary.prototype.search = function (word) {
+  //code me
+};
