@@ -42,32 +42,24 @@ function revrot(str, sz) {
     }
     let strArr = [];
     for (let i = 0; i < str.length; i += sz) {
-      strArr.push(str.substring(i, i + sz));
+      let chunk = str.substring(i, i + sz);
+      let sum = 0;
+      for (let i = 0; i < chunk.length; i++) {
+        sum += Math.pow(chunk[i], 3);
+      }
+      if (sum % 2 == 0) {
+        el = chunk.split("").reverse().join("");
+      } else {
+        let shiftLetter = chunk.split("");
+        let tmp = shiftLetter.shift();
+        shiftLetter.push(tmp);
+        chunk = shiftLetter.join("");
+      }
+      strArr.push(chunk);
     }
     return strArr;
   }
-  // console.log(toChunks());
-
-  function checkChunks(arr) {
-    arr.forEach((el) => {
-      el.split("");
-      let sum = 0;
-      for (let i = 0; i < el.length; i++) {
-        sum += Math.pow(el[i], 3);
-      }
-      if (sum % 2 == 0) {
-        el = el.split("").reverse().join("");
-      } else {
-        let shiftLetter = el.split("");
-        let tmp = shiftLetter.shift();
-        shiftLetter.push(tmp);
-        el = shiftLetter.join("");
-      }
-      // console.log(el);
-    });
-    return arr;
-  }
-  checkChunks(toChunks());
+  console.log(toChunks());
 }
 
 console.log(revrot("123456987654", 6));
