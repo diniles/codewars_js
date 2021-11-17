@@ -51,6 +51,13 @@ function revrot(str, sz) {
   function checkChunks(arr) {
     arr.forEach((el) => {
       el.split("");
+      let sum = 0;
+      for (let i = 0; i < el.length; i++) {
+        sum += Math.pow(el[i], 3);
+      }
+      if (sum % 2 == 0) {
+        el = el.split("").reverse().join("");
+      }
       console.log(el);
     });
   }
@@ -58,7 +65,7 @@ function revrot(str, sz) {
 }
 
 console.log(revrot("123456987654", 6));
-// console.log(revrot("123456987653", 6));
+console.log(revrot("123456987653", 6));
 // console.log(revrot("66443875", 4));
 // console.log(revrot("66443875", 8));
 // console.log(revrot("664438769", 8));
