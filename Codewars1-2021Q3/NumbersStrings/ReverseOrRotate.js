@@ -73,4 +73,4 @@ console.log(revrot("123456779", 8));
 console.log(revrot("", 8));
 console.log(revrot("123456779", 0));
 console.log(revrot("563000655734469485", 4));
-console.log(revrot(733049910872815764, 5));
+console.log(revrot("733049910872815764", 5));
