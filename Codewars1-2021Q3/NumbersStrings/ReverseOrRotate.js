@@ -46,7 +46,7 @@ function revrot(str, sz) {
     }
     return strArr;
   }
-  console.log(toChunks());
+  // console.log(toChunks());
 
   function checkChunks(arr) {
     arr.forEach((el) => {
@@ -63,8 +63,9 @@ function revrot(str, sz) {
         shiftLetter.push(tmp);
         el = shiftLetter.join("");
       }
-      console.log(el);
+      // console.log(el);
     });
+    return arr;
   }
   checkChunks(toChunks());
 }
