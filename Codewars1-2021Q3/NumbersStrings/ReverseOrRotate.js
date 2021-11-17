@@ -53,9 +53,8 @@ function revrot(str, sz) {
       el.split("");
       console.log(el);
     });
-
-    checkChunks(toChunks);
   }
+  checkChunks(toChunks());
 }
 
 console.log(revrot("123456987654", 6));
