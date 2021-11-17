@@ -49,6 +49,8 @@ function revrot(str, sz) {
   console.log(toChunks());
 }
 
+function checkChauks(arr) {}
+
 console.log(revrot("123456987654", 6));
 console.log(revrot("123456987653", 6));
 // console.log(revrot("66443875", 4));
