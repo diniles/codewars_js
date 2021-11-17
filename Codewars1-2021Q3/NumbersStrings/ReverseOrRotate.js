@@ -36,6 +36,7 @@ function revrot(str, sz) {
   if (sz > strL) {
     return "";
   }
+
   function toChunks() {
     if (strL % sz != 0) {
       str.length = strL - (strL % sz);
@@ -48,7 +49,7 @@ function revrot(str, sz) {
         sum += Math.pow(chunk[i], 3);
       }
       if (sum % 2 == 0) {
-        el = chunk.split("").reverse().join("");
+        chunk = chunk.split("").reverse().join("");
       } else {
         let shiftLetter = chunk.split("");
         let tmp = shiftLetter.shift();
@@ -59,7 +60,7 @@ function revrot(str, sz) {
     }
     return strArr.join("");
   }
-  console.log(toChunks());
+  return toChunks();
 }
 
 console.log(revrot("123456987654", 6));
