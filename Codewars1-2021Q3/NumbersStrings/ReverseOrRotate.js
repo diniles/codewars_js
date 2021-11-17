@@ -57,6 +57,11 @@ function revrot(str, sz) {
       }
       if (sum % 2 == 0) {
         el = el.split("").reverse().join("");
+      } else {
+        let shiftLetter = el.split("");
+        let tmp = shiftLetter.shift();
+        shiftLetter.push(tmp);
+        el = shiftLetter.join("");
       }
       console.log(el);
     });
