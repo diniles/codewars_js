@@ -26,3 +26,28 @@ WordDictionary.prototype.addWord = function (word) {
 WordDictionary.prototype.search = function (word) {
   //code me
 };
+
+describe("Initial tests", () => {
+  var wd = new WordDictionary();
+  wd.addWord("a");
+  wd.addWord("at");
+  wd.addWord("ate");
+  wd.addWord("ear");
+  Test.assertEquals(wd.search("a"), true);
+  Test.assertEquals(wd.search("a."), true);
+  Test.assertEquals(wd.search("a.e"), true);
+  Test.assertEquals(wd.search("b"), false);
+  Test.assertEquals(wd.search("e."), false);
+  Test.assertEquals(wd.search("ea."), true);
+  Test.assertEquals(wd.search("ea.."), false);
+  wd.addWord("co");
+  wd.addWord("cod");
+  wd.addWord("code");
+  wd.addWord("codewars");
+  Test.assertEquals(wd.search("........"), true);
+  Test.assertEquals(wd.search("c.o"), false);
+  Test.assertEquals(wd.search("cod."), true);
+  Test.assertEquals(wd.search("c.o"), false);
+  Test.assertEquals(wd.search("co..w..s"), true);
+  Test.assertEquals(wd.search("co..w.."), false);
+});
