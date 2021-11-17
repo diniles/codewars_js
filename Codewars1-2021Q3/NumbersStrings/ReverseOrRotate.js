@@ -47,15 +47,15 @@ function revrot(str, sz) {
     return strArr;
   }
   console.log(toChunks());
-}
 
-function checkChunks(arr) {
-  arr.forEach((el) => {
-    el.split("");
-    console.log(el);
-  });
+  function checkChunks(arr) {
+    arr.forEach((el) => {
+      el.split("");
+      console.log(el);
+    });
 
-  checkChunks(toChunks);
+    checkChunks(toChunks);
+  }
 }
 
 console.log(revrot("123456987654", 6));
