@@ -49,10 +49,17 @@ function revrot(str, sz) {
   console.log(toChunks());
 }
 
-function checkChauks(arr) {}
+function checkChunks(arr) {
+  arr.forEach((el) => {
+    el.split("");
+    console.log(el);
+  });
+
+  checkChunks(toChunks);
+}
 
 console.log(revrot("123456987654", 6));
-console.log(revrot("123456987653", 6));
+// console.log(revrot("123456987653", 6));
 // console.log(revrot("66443875", 4));
 // console.log(revrot("66443875", 8));
 // console.log(revrot("664438769", 8));
