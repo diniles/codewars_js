@@ -40,10 +40,10 @@ function revrot(str, sz) {
 
   function toChunks() {
     if (strL % sz != 0) {
-      str.length = strL - (strL % sz);
+      strL = strL - (strL % sz);
     }
     let strArr = [];
-    for (let i = 0; i < str.length; i += sz) {
+    for (let i = 0; i < strL; i += sz) {
       let chunk = str.substring(i, i + sz);
       let sum = 0;
       for (let i = 0; i < chunk.length; i++) {
@@ -68,9 +68,9 @@ function revrot(str, sz) {
 // console.log(revrot("123456987653", 6));
 // console.log(revrot("66443875", 4));
 // console.log(revrot("66443875", 8));
-console.log(revrot("664438769", 8));
-console.log(revrot("123456779", 8));
+// console.log(revrot("664438769", 8));
+// console.log(revrot("123456779", 8));
 // console.log(revrot("", 8));
 // console.log(revrot("123456779", 0));
-console.log(revrot("563000655734469485", 4));
-console.log(revrot("733049910872815764", 5));
+// console.log(revrot("563000655734469485", 4));
+// console.log(revrot("733049910872815764", 5));
