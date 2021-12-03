@@ -25,3 +25,11 @@
 // array.
 
 // sortByBit([3, 8, 3, 6, 5, 7, 9, 1]) // => [1, 8, 3, 3, 5, 6, 9, 7]
+
+function sortByBits(arr) {
+  function toBinArr(num) {
+    return num.toString(2).split("");
+  }
+  return toBinArr(arr[0]);
+}
+sortByBit([3, 8, 3, 6, 5, 7, 9, 1]);
