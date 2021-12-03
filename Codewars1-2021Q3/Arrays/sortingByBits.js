@@ -33,7 +33,13 @@ function sortByBits(arr) {
       parseInt(prevValue) + parseInt(currValue);
     return arrBits.reduce(reducer);
   }
-  return toBinArrSum(arr[3]);
+
+  const result = new Map();
+  for (const el of arr) {
+    result.set(el, toBinArrSum(el));
+  }
+
+  return result;
 }
 
 console.log(sortByBits([3, 8, 3, 6, 5, 7, 9, 1]));
