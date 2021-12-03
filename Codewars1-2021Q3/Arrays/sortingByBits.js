@@ -31,14 +31,14 @@ function sortByBits(arr) {
     const arrBits = num.toString(2).split("");
     const reducer = (prevValue, currValue) =>
       parseInt(prevValue) + parseInt(currValue);
-    return arrBits.reduce(reducer);
+    return arrBits.reduce(reducer).toString();
   }
 
-  const result = new Map();
+  const result = {};
   for (const el of arr) {
-    result.set(el, toBinArrSum(el));
+    result[el] = toBinArrSum(el);
   }
-
+  // console.log(Object.keys(result).length);
   return result;
 }
 
