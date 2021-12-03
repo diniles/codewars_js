@@ -29,10 +29,11 @@
 function sortByBits(arr) {
   function toBinArrSum(num) {
     const arrBits = num.toString(2).split("");
-    const reducer = (previousValue, currentValue) =>
-      parseInt(previousValue) + parseInt(currentValue);
+    const reducer = (prevValue, currValue) =>
+      parseInt(prevValue) + parseInt(currValue);
     return arrBits.reduce(reducer);
   }
   return toBinArrSum(arr[3]);
 }
+
 console.log(sortByBits([3, 8, 3, 6, 5, 7, 9, 1]));
