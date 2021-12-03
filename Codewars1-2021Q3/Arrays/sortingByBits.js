@@ -32,4 +32,4 @@ function sortByBits(arr) {
   }
   return toBinArr(arr[0]);
 }
-sortByBit([3, 8, 3, 6, 5, 7, 9, 1]);
+console.log(sortByBit([3, 8, 3, 6, 5, 7, 9, 1]));
