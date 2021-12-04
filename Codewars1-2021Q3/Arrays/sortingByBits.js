@@ -38,7 +38,12 @@ function sortByBits(arr) {
   for (const el of arr) {
     arrBinDec.push(toBinArrSum(el) + el.toString());
   }
-  return arrBinDec.sort();
+  const tmpArr = arrBinDec.sort();
+  const result = [];
+  for (const el of tmpArr) {
+    result.push(el[el.length - 1]);
+  }
+  return result;
 }
 
 console.log(sortByBits([3, 8, 3, 6, 5, 7, 9, 1]));
