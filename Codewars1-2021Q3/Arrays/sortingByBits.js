@@ -41,7 +41,7 @@ function sortByBits(arr) {
   const tmpArr = arrBinDec.sort();
   const result = [];
   for (const el of tmpArr) {
-    result.push(el[el.length - 1]);
+    result.push(parseInt(el[el.length - 1]));
   }
   return result;
 }
