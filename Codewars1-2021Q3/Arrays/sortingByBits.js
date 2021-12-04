@@ -34,11 +34,15 @@ function sortByBits(arr) {
     return arrBits.reduce(reducer).toString();
   }
 
-  const result = {};
+  const arrBinDec = [];
   for (const el of arr) {
-    result[el] = toBinArrSum(el);
+    arrBinDec.push(toBinArrSum(el) + el.toString());
   }
-  // console.log(Object.keys(result).length);
+  const tmpArr = arrBinDec.sort();
+  const result = [];
+  for (const el of tmpArr) {
+    result.push(parseInt(el[el.length - 1]));
+  }
   return result;
 }
 
