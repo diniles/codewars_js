@@ -13,6 +13,11 @@ function numberToString(num) {
   return num.toString();
 }
 
+// another solution
+function numberToString(num) {
+  return String(num);
+}
+
 console.log(typeof numberToString(123));
 console.log(typeof numberToString(999));
 console.log(typeof numberToString(-1));
