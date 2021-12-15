@@ -10,5 +10,9 @@
 // 999 --> "999"
 
 function numberToString(num) {
-  // Return a string of the number here!
+  return num.toString();
 }
+
+console.log(typeof numberToString(123));
+console.log(typeof numberToString(999));
+console.log(typeof numberToString(-1));
