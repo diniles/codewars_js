@@ -19,6 +19,7 @@
 // Test.assertEquals(century(89), 1, "Testing for year 89");
 
 function century(year) {
-  // Finish this :)
-  return;
+  const century = 0;
+
+  return century;
 }
