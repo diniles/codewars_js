@@ -1,5 +1,5 @@
 // perimeterSequence.js
-// https://www.codewars.com/kata/589519d1f0902e01af000054/train/javascript
+// https://www.codewars.com/kata/perimeter-sequence
 
 // Perimeter sequence
 // The first three stages of a sequence are shown.

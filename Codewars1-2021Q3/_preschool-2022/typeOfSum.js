@@ -1,4 +1,6 @@
 // typeOfSum.js
+// https://www.codewars.com/kata/type-of-sum
+
 // Return the type of the sum of the two arguments
 // describe("Basic tests",() => {
 //   Test.assertEquals(typeOfSum(12, 1), 'number');

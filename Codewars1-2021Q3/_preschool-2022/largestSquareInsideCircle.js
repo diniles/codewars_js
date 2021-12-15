@@ -1,4 +1,6 @@
 // largestSquareInsideCircle.js
+// https://www.codewars.com/kata/largest-square-inside-a-circle
+
 // Determine the area of the largest square that can fit inside a circle with radius r.
 
 // assert.strictEqual(areaLargestSquare(5), 50);

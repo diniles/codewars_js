@@ -1,4 +1,6 @@
 // oppositeNumber.js
+// https://www.codewars.com/kata/opposite-number
+
 // Very simple, given an integer or a floating-point number, find its opposite.
 
 // Examples:
