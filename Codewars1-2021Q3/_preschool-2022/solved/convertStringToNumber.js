@@ -18,6 +18,11 @@ var stringToNumber = function (str) {
   return Number(str);
 };
 
+// another solution
+var stringToNumber = function (str) {
+  return +str;
+};
+
 console.log(typeof stringToNumber("1234"));
 console.log(typeof stringToNumber("605"));
 console.log(typeof stringToNumber("1405"));
