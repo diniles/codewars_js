@@ -14,5 +14,8 @@
 // toBinary(11) /* should return 1011 */
 
 function toBinary(n) {
-  return n;
+  return n.toString(2);
 }
+console.log(toBinary(1));
+console.log(toBinary(5));
+console.log(toBinary(11));
