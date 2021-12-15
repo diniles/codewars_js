@@ -13,3 +13,6 @@ function capitalizeWord(word) {
   word[0].toUpperCase();
   return word;
 }
+
+console.log(capitalizeWord("word"));
+console.log(capitalizeWord("srting"));
