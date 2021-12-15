@@ -7,8 +7,10 @@
 //  would want to show your friends?
 // Write a function "greet" that returns "hello world!"
 
-function greet() {
-  return "hello world!";
-}
+// function greet() {
+//   return "hello world!";
+// }
+
+const greet = () => "hello world!";
 
 console.log(greet());
