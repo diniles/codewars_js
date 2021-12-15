@@ -26,7 +26,7 @@
 
 // sortByBit([3, 8, 3, 6, 5, 7, 9, 1]) // => [1, 8, 3, 3, 5, 6, 9, 7]
 
-function sortByBits(arr) {
+function sortByBit(arr) {
   function toBinArrSum(num) {
     const arrBits = num.toString(2).split("");
     const reducer = (prevValue, currValue) =>
@@ -46,4 +46,4 @@ function sortByBits(arr) {
   return result;
 }
 
-console.log(sortByBits([3, 8, 3, 6, 5, 7, 9, 1]));
+console.log(sortByBit([3, 8, 3, 6, 5, 7, 9, 1]));
