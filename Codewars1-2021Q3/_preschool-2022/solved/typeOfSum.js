@@ -20,6 +20,10 @@
 function typeOfSum(a, b) {
   return typeof (a + b);
 }
+
+// another solution
+const typeOfSum = (a, b) => typeof (a + b);
+
 console.log(typeOfSum(12, 1));
 console.log(typeOfSum("d", 1));
 console.log(typeOfSum(1, "a"));
