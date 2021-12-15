@@ -14,7 +14,7 @@
 // toBinary(11) /* should return 1011 */
 
 function toBinary(n) {
-  return n.toString(2);
+  return parseInt(n.toString(2));
 }
 console.log(toBinary(1));
 console.log(toBinary(5));
