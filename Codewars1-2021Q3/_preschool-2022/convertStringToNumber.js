@@ -14,6 +14,10 @@
 // "-7" --> -7
 
 var stringToNumber = function (str) {
-  // put your code here
-  return null;
+  return parseInt(str);
 };
+
+console.log(typeof stringToNumber("1234"));
+console.log(typeof stringToNumber("605"));
+console.log(typeof stringToNumber("1405"));
+console.log(typeof stringToNumber("-7"));
