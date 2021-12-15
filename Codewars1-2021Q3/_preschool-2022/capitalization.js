@@ -10,7 +10,7 @@
 // function. The string lengths will be from 1 character up to 10 characters, but will never be empty.
 
 function capitalizeWord(word) {
-  word[0].toUpperCase();
+  word = word[0].toUpperCase() + word.splice(1, word.length(-1));
   return word;
 }
 
