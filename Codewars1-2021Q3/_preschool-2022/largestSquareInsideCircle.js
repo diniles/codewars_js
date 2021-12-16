@@ -8,11 +8,10 @@
 // assert.strictEqual(areaLargestSquare(15), 450);
 
 function areaLargestSquare(r) {
-  const hypo = (r * 2) ** 2;
-  const squareSize = Math.sqrt(hypo / 2);
-  return parseInt(squareSize * squareSize);
+  return r ** 2 * 2;
 }
 
 console.log(areaLargestSquare(5));
 console.log(areaLargestSquare(7));
 console.log(areaLargestSquare(15));
+console.log(areaLargestSquare(34));
