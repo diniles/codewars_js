@@ -16,4 +16,28 @@
 
 function updateLight(current) {
   //your code here!
+  switch (current) {
+    case "green":
+      return "yellow";
+      break;
+    case "yellow":
+      return "red";
+      break;
+    case "red":
+      return "green";
+      break;
+  }
 }
+
+// another solution
+function updateLight(current) {
+  return current === "yellow"
+    ? "red"
+    : current === "green"
+    ? "yellow"
+    : "green";
+}
+
+console.log(updateLight("green"));
+console.log(updateLight("yellow"));
+console.log(updateLight("red"));
