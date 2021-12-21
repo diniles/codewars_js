@@ -15,4 +15,9 @@
 
 function digits(n) {
   // code goes here
+  return n.toString().length;
 }
+
+console.log(digits(5));
+console.log(digits(12345));
+console.log(digits(9876543210));
