@@ -18,6 +18,11 @@ function digits(n) {
   return n.toString().length;
 }
 
+// another solution
+function digits(n) {
+  return String(n).length;
+}
+
 console.log(digits(5));
 console.log(digits(12345));
 console.log(digits(9876543210));
