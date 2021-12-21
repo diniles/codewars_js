@@ -11,4 +11,8 @@
 
 function solution(str, ending) {
   // TODO: complete
+  return str.endsWith(ending);
 }
+
+console.log(solution("abc", "bc")); // returns true
+console.log(solution("abc", "d")); // returns false
