@@ -19,7 +19,7 @@
 // Test.assertEquals(century(89), 1, "Testing for year 89");
 
 function century(year) {
-  return Math.ceil((year / 100) * 100);
+  return Math.ceil(year / 100);
 }
 
 console.log(century(1705));
