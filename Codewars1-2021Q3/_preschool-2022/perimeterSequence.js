@@ -18,4 +18,7 @@
 
 function perimeterSequence(a, n) {
   // your code
+  return a * (n * 4);
 }
+
+console.log(perimeterSequence(1, 3));
