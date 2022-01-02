@@ -14,5 +14,14 @@
 // vowelOne( "aeiou, abc" ) // "1111100100"
 
 function vowelOne(s) {
-  // ...
+    const vowels = 'aeiou';
+    let result = '';
+    for (const ch of s) {
+        if (vowels.includes(ch)) result += '1';
+        else result += '0';
+    }
+    return result;
 }
+
+console.log(vowelOne("abceios"));
+console.log(vowelOne("aeiou, abc"));
