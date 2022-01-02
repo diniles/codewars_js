@@ -23,5 +23,13 @@ function vowelOne(s) {
     return result;
 }
 
+function vowelOne(s){
+    return s.replace(/[^aeiou]/gi, '0').replace(/[^\d]/g, '1');
+}
+
+function vowelOne(s){
+    return s.split('').map(x => ('aeiouAEIOU'.includes(x)) ? 1 : 0).join('');
+}
+
 console.log(vowelOne("abceios"));
 console.log(vowelOne("aeiou, abc"));
