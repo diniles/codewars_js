@@ -17,7 +17,7 @@ function vowelOne(s) {
     const vowels = 'aeiou';
     let result = '';
     for (const ch of s) {
-        if (vowels.includes(ch)) result += '1';
+        if (vowels.includes(ch.toLowerCase())) result += '1';
         else result += '0';
     }
     return result;
