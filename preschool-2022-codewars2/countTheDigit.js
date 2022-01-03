@@ -22,4 +22,15 @@
 
 function nbDig(n, d) {
   // your code
+  let count = 0;
+  d = String(d);
+  for (let i = 0; i <= n; i++) {
+    for (const ch of String(i * i)) {
+      if (ch === d) count++;
+    }
+  }
+  return count;
 }
+
+console.log(nbDig(10, 1));
+console.log(nbDig(25, 1));
