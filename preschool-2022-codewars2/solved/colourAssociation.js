@@ -26,4 +26,7 @@ function colourAssociation(array) {
     return result;
 }
 
+// best solution
+const colourAssociation = array => array.map(([colour, association]) => ({[colour]:association}))
+
 console.log(colourAssociation([["white", "goodness"], ["blue", "tranquility"]]));
