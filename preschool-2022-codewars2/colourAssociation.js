@@ -16,5 +16,14 @@
 // Test.assertSimilar(colourAssociation([["red", "energy"],["yellow", "creativity"],["brown" , "friendly"],["green", "growth"]]), [{red: "energy"},{yellow: "creativity"}, {brown: "friendly"},{green: "growth"}]);
 
 function colourAssociation(array) {
-  // We <3 colours..
+    // We <3 colours..
+    const result = [];
+    for (const el of array) {
+        const o = {};
+        o[el[0]] = el[1];
+        result.push(o);
+    }
+    return result;
 }
+
+console.log(colourAssociation([["white", "goodness"], ["blue", "tranquility"]]));
