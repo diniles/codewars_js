@@ -19,5 +19,14 @@
 // [1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,0,1,0,1,0,1,0]
 
 function dataReverse(data) {
-  // Your code here
+    // Your code here
+    const reversedData = new Array(data.length);
+    for (let i = 0; i < data.length; i = i + 8) {
+        reversedData.unshift(data.slice(i, i + 8));
+    }
+    // return reversedData.flat();
+    const result = (reversedData.length);
+
 }
+
+console.log(dataReverse([1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0]));
