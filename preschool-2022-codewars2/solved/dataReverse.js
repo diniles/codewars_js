@@ -28,4 +28,7 @@ function dataReverse(data) {
   return reversedData.reduce((acc, val) => acc.concat(val), []);
 }
 
+// best solution
+const dataReverse = a => a.join``.match(/\d{8}/g).reverse().join``.split``.map(Number);
+
 console.log(dataReverse([1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0]));
