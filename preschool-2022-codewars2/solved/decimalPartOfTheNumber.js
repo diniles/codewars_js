@@ -11,5 +11,15 @@
 // getDecimal(-0.2) === 0.2
 
 function getDecimal(n) {
-  return n; // fix me
+  n = String(n);
+  return n.indexOf('.') != -1 ? Number('0' + n.slice(n.indexOf('.'))) : 0;
 }
+
+// best solution!!!
+function getDecimal(n) {
+  return Math.abs(n % 1);
+}
+
+console.log(getDecimal(4.5));
+console.log(getDecimal(-1.2));
+console.log(getDecimal(10));
