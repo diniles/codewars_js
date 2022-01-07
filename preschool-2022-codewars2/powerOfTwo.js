@@ -20,7 +20,7 @@
 
 function isPowerOfTwo(n) {
   //.. should return true or false ..
-  return n && ((n & (n - 1)) == 0);
+  return (n < 1) ? false : n && ((n & (n - 1)) == 0);
 }
 
 console.log(isPowerOfTwo(1024));
