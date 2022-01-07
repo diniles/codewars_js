@@ -23,6 +23,11 @@ function isPowerOfTwo(n) {
   return (n < 1) ? false : n && ((n & (n - 1)) == 0);
 }
 
+// best solution
+function isPowerOfTwo(n) {
+  return Number.isInteger(Math.log2(n));
+}
+
 console.log(isPowerOfTwo(1024));
 console.log(isPowerOfTwo(4096));
 console.log(isPowerOfTwo(333));
