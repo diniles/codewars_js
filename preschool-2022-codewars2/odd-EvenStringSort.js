@@ -1,4 +1,4 @@
-// odd-EvenStringSort.j
+// odd-EvenStringSort.js
 // https://www.codewars.com/kata/580755730b5a77650500010c/train/javascript
 
 // Given a string S. You have to return another string such that even-indexed
@@ -25,5 +25,15 @@
 
 function sortMyString(S) {
   // your code here
-  return "";
+  const evens = [];
+  const odds = [];
+  for (let i = 0; i < S.length; i = i + 2) {
+    evens.push(S[i]);
+  }
+  for (let i = 1; i < S.length; i = i + 2) {
+    odds.push(S[i]);
+  }
+  return `${evens.join('')} ${odds.join('')}`;
 }
+
+console.log(sortMyString('CodeWars'));
