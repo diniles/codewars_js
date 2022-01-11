@@ -27,4 +27,16 @@
 // arr6 = [1, 2, 3, 4, 5, 10, 12];
 // mergeArrays(arr5, arr6);  // [1, 2, 3, 4, 5, 7, 9, 10, 11, 12]
 
-function mergeArrays(arr1, arr2) {}
+function mergeArrays(arr1, arr2) {
+  return (arr1.concat(arr2)).sort((a, b) => a - b);
+}
+
+const arr1 = [1, 2, 3, 4, 5];
+const arr2 = [6, 7, 8, 9, 10];
+console.log(mergeArrays(arr1, arr2));
+const arr3 = [1, 3, 5, 7, 9];
+const arr4 = [10, 8, 6, 4, 2];
+console.log(mergeArrays(arr3, arr4));
+const arr5 = [1, 3, 5, 7, 9, 11, 12];
+const arr6 = [1, 2, 3, 4, 5, 10, 12];
+console.log(mergeArrays(arr5, arr6));
