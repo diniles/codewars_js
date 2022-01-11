@@ -19,7 +19,9 @@ function combine() {
   // Your code here
   const result = {};
   for (const arg of arguments) {
-    Object.assign(result, arg);
+    for (let key in arg) {
+      key in result ? result[key] += arg[key] : result[key] = arg[key];
+    }
   }
   return result;
 }
