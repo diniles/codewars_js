@@ -21,4 +21,13 @@
 
 function sentence(List) {
   // your code
+  const sortedArray = Array(List.length);
+  return sortedArray;
 }
+
+let List = [
+  {'4': 'dog'}, {'2': 'took'}, {'3': 'his'},
+  {'-2': 'Vatsan'}, {'5': 'for'}, {'6': 'a'}, {'12': 'spin'}
+];
+
+console.log(sentence(List));
