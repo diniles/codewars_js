@@ -15,16 +15,21 @@
 // The combine function should be a good citizen, so should not mutate the input
 // objects.
 
-function combine() {
-  // Your code here
-  const result = {};
-  for (const arg of arguments) {
-    for (let key in arg) {
-      key in result ? result[key] += arg[key] : result[key] = arg[key];
-    }
-  }
-  return result;
-}
+// function combine() {
+//   // Your code here
+//   const result = {};
+//   for (const arg of arguments) {
+//     for (let key in arg) {
+//       key in result ? result[key] += arg[key] : result[key] = arg[key];
+//     }
+//   }
+//   return result;
+// }
+
+// best solution
+const combine = (...args) =>
+  args.reduce((pre, val) => (Object.keys(val).forEach(v => pre[v] = (pre[v] || 0) + val[v]), pre), {});
+
 
 const objA = {a: 10, b: 20, c: 30};
 const objB = {a: 3, c: 6, d: 3};
