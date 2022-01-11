@@ -17,4 +17,10 @@
 
 function combine() {
   // Your code here
+  const result = {};
+  return Object.assign(result, objA, objB);
 }
+
+const objA = {a: 10, b: 20, c: 30};
+const objB = {a: 3, c: 6, d: 3};
+console.log(combine(objA, objB));
