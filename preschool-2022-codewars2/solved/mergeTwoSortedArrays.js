@@ -27,8 +27,13 @@
 // arr6 = [1, 2, 3, 4, 5, 10, 12];
 // mergeArrays(arr5, arr6);  // [1, 2, 3, 4, 5, 7, 9, 10, 11, 12]
 
-function mergeArrays(arr1, arr2) {
-  return Array.from(new Set((arr1.concat(arr2)).sort((a, b) => a - b)));
+// function mergeArrays(arr1, arr2) {
+//   return Array.from(new Set((arr1.concat(arr2)).sort((a, b) => a - b)));
+// }
+
+// another solution
+function mergeArrays(a, b) {
+  return [...new Set(a.concat(b))].sort((a, b) => a - b);
 }
 
 const arr1 = [1, 2, 3, 4, 5];
