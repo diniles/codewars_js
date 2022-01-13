@@ -18,15 +18,20 @@
 // return the name of the one killer, in our case 'James' because he is the only
 // person that saw both 'Lucas' and 'Bill'
 
+// function killer(suspectInfo, dead) {
+//   //your code here...
+//   let count = 0;
+//   for (const [key, value] of Object.entries(suspectInfo)) {
+//     for (const el of dead) {
+//       if (value.includes(el)) count++;
+//     }
+//     if (count == dead.length) return key;
+//   }
+// }
+
+// best solution
 function killer(suspectInfo, dead) {
-  //your code here...
-  let count = 0;
-  for (const [key, value] of Object.entries(suspectInfo)) {
-    for (const el of dead) {
-      if (value.includes(el)) count++;
-    }
-    if (count == dead.length) return key;
-  }
+  return Object.keys(suspectInfo).find(x => dead.every(y => suspectInfo[x].includes(y)));
 }
 
 const s = {
