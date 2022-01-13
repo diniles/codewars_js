@@ -20,4 +20,21 @@
 
 function killer(suspectInfo, dead) {
   //your code here...
+  let count = 0;
+  for (const [key, value] of Object.entries(suspectInfo)) {
+    for (const el of dead) {
+      if (value.includes(el)) count++;
+    }
+    if (count == dead.length) return key;
+  }
 }
+
+const s = {
+  'James': ['Jacob', 'Bill', 'Lucas'],
+  'Johnny': ['David', 'Kyle', 'Lucas'],
+  'Peter': ['Lucy', 'Kyle']
+};
+
+
+const d = ['Lucas', 'Bill'];
+console.log(killer(s, d));
