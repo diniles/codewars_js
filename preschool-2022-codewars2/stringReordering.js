@@ -21,17 +21,16 @@
 
 function sentence(List) {
   // your code
-  const sortedArray = [];
-  return List.sort(function (a, b) {
-    return a.keys - b.keys;
+  let result = '';
+  List.sort((a, b) =>
+    Object.keys(a) - Object.keys(b)
+  );
+  List.forEach(function (el) {
+    for (const elKey in el) {
+      result += el[elKey] + ' ';
+    }
   });
-  // List.forEach(function (el) {
-  //   for (const elKey in el) {
-  //     sortedArray.push(el[elKey]);
-  //   }
-  // });
-  // return sortedArray.join(' ');
-
+  return result.trim();
 }
 
 let List = [
