@@ -21,8 +21,17 @@
 
 function sentence(List) {
   // your code
-  const sortedArray = Array(List.length);
-  return sortedArray;
+  const sortedArray = [];
+  return List.sort(function (a, b) {
+    return a.keys - b.keys;
+  });
+  // List.forEach(function (el) {
+  //   for (const elKey in el) {
+  //     sortedArray.push(el[elKey]);
+  //   }
+  // });
+  // return sortedArray.join(' ');
+
 }
 
 let List = [
