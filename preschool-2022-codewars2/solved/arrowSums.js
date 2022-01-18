@@ -17,7 +17,10 @@
 
 // Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
 
-var Sum = "sum = function(arr){ return arr.reduce( (a,b)=> a+b); }";
+// var Sum = "sum = function(arr){ return arr.reduce( (a,b)=> a+b); }";
+
+// best solution
+var Sum = "sum = (args) => args.reduce((p, c) => p + c, 0);";
 
 var test = [
   [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
