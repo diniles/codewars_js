@@ -16,6 +16,13 @@ function spread(func, args) {
   return func(...args);
 }
 
+// another solutions
+// function spread(func, args) {
+//   return func.apply(null, args);
+// }
+// function spread(func, args) {
+//   return func.apply(this, args);
+// }
 console.log(
   spread(
     function (x, y) {
