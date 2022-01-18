@@ -55,5 +55,9 @@ questions.map(obj => {
   obj.usersAnswer = null;
 });
 
+// another solution
+// questions.forEach(function (i) {
+//   i.usersAnswer = null;
+// });
 
 console.log(questions);
