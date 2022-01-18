@@ -34,4 +34,10 @@
 
 function maxTriSum(numbers) {
   //your code here
+  const nums = new Set(numbers);
+  return nums;
 }
+
+console.log(maxTriSum([3, 2, 6, 8, 2, 3]));
+console.log(maxTriSum([2, 1, 8, 0, 6, 4, 8, 6, 2, 4]));
+console.log(maxTriSum([-7, 12, -7, 29, -5, 0, -7, 0, 0, 29]));
