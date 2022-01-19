@@ -38,7 +38,9 @@ function maxTriSum(numbers) {
   for (let i = 1; i < numbers.length; i++) {
     let sum = 0;
     for (let j = 0; j < 3; j++) {
-      if (!numbers.splice(0, i).includes(numbers[i])) {
+      if (numbers.splice(0, i).includes(numbers[i])) {
+        continue;
+      } else {
         sum = +numbers[i];
       }
     }
