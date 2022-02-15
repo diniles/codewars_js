@@ -17,4 +17,4 @@
 
 // Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
 
-var Sum = "sum = function(arr){ return arr.reduce( => ); }";
+var Sum = "sum = function(arr){ return arr.reduce( (a, b) => a + b); }";
