@@ -34,4 +34,21 @@
 
 function maxTriSum(numbers) {
   //your code here
+  let max = numbers.splice(0, 3).reduce((a, b) => a + b);
+  for (let i = 1; i < numbers.length; i++) {
+    let sum = 0;
+    for (let j = 0; j < 3; j++) {
+      if (numbers.splice(0, i).includes(numbers[i])) {
+        continue;
+      } else {
+        sum = +numbers[i];
+      }
+    }
+    if (sum > max) max = sum;
+  }
+  return max;
 }
+
+console.log(maxTriSum([3, 2, 6, 8, 2, 3]));
+console.log(maxTriSum([2, 1, 8, 0, 6, 4, 8, 6, 2, 4]));
+console.log(maxTriSum([-7, 12, -7, 29, -5, 0, -7, 0, 0, 29]));

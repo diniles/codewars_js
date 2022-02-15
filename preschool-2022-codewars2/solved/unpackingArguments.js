@@ -13,5 +13,21 @@
 // someFunction(1, true, "Foo", "bar")
 
 function spread(func, args) {
-  // ...
+  return func(...args);
 }
+
+// another solutions
+// function spread(func, args) {
+//   return func.apply(null, args);
+// }
+// function spread(func, args) {
+//   return func.apply(this, args);
+// }
+console.log(
+  spread(
+    function (x, y) {
+      return x + y;
+    },
+    [1, 2]
+  )
+);

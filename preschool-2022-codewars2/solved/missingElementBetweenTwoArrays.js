@@ -11,6 +11,20 @@
 // find_missing([6, 1, 3, 6, 8, 2], [3, 6, 6, 1, 2]) => 8
 // The first array will always have at least one element.
 
+// function findMissing(arr1, arr2) {
+//   // Your solution here
+//   const sortedArr1 = arr1.sort((a, b) => a - b);
+//   const sortedArr2 = arr2.sort((a, b) => a - b);
+//   for (let i = 0; i < sortedArr1.length; i++) {
+//     if (sortedArr1[i] !== sortedArr2[i]) return sortedArr1[i];
+//   }
+// }
+
+// best solution
 function findMissing(arr1, arr2) {
-  // Your solution here
+  const reducer = (accumulator, currentValue) => accumulator + currentValue;
+  return arr1.reduce(reducer, 0) - arr2.reduce(reducer, 0);
 }
+
+console.log(findMissing([1, 2, 2, 3], [1, 2, 3]));
+console.log(findMissing([6, 1, 3, 6, 8, 2], [3, 6, 6, 1, 2]));
