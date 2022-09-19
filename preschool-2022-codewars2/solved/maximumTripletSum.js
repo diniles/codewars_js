@@ -33,20 +33,8 @@
 // once .
 
 function maxTriSum(numbers) {
-  //your code here
-  let max = numbers.splice(0, 3).reduce((a, b) => a + b);
-  for (let i = 1; i < numbers.length; i++) {
-    let sum = 0;
-    for (let j = 0; j < 3; j++) {
-      if (numbers.splice(0, i).includes(numbers[i])) {
-        continue;
-      } else {
-        sum = +numbers[i];
-      }
-    }
-    if (sum > max) max = sum;
-  }
-  return max;
+  const sorted = [...new Set(numbers.sort((a, b) => b - a))]
+  return sorted[0] + sorted[1] + sorted[2]
 }
 
 console.log(maxTriSum([3, 2, 6, 8, 2, 3]));
