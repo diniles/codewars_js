@@ -1,3 +1,5 @@
+//www.codewars.com/kata/5641a03210e973055a00000d/train/javascript
+
 // Each number should be formatted that it is rounded to two decimal places.
 // You don't need to check whether the input is a valid number because only
 // valid numbers are used in the tests.
@@ -6,7 +8,7 @@
 // 5.5589 is rounded 5.56
 // -3.3424 is rounded -3.34
 
-function twoDecimalPlaces(n) {
+https: function twoDecimalPlaces(n) {
   return parseFloat(n.toFixed(2));
 }
 
