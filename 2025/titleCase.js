@@ -48,7 +48,44 @@
 // }
 
 // DeeepSeek refactored
+// Improvements Made:
+// Better Empty Input Handling: Added a check for empty/null title input.
 
+// More Efficient Minor Words Lookup:
+
+// Convert minorWords to a Set for O(1) lookups instead of string includes (O(n))
+
+// Process minorWords once at the start rather than checking in each iteration
+
+// Simpler Logic Flow:
+
+// Convert the entire title to lowercase first, then capitalize where needed
+
+// Uses array map for more functional programming style
+
+// Combines the first word and non-minor words logic in one condition
+
+// Edge Case Handling:
+
+// Handles empty strings better
+
+// More consistent with word capitalization
+
+// Uses charAt(0) which is safer than direct index access for empty strings
+
+// Performance:
+
+// Set lookup is faster than string includes
+
+// Single pass transformation with map
+
+// Readability:
+
+// More concise implementation
+
+// Clearer variable names
+
+// Less mutation of variables
 function titleCase(title, minorWords) {
   if (!title) return '';
 
